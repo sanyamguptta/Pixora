@@ -38,7 +38,7 @@ app.use("/api/users", userRouter);
 console.log(__dirname);
 
 app.use('*name', (req, res) => {
-    app.use(path.join(__dirname, "..", "/public/assets/index.html"));
+    res.sendFile(path.join(__dirname, "..", "/public/assets/index.html"));
 })
 
 module.exports = app;
